@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0f14">
+    <meta name="description" content="NORYN AI v8 — Search, Research and Write">
+    <title>NORYN AI v8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-logo">N</div>
+                <div>
+                    <h1>NORYN</h1>
+                    <span>AI v8</span>
+                </div>
+            </div>
+            <button class="menu-button" id="menuButton" aria-label="القائمة">☰</button>
+        </header>
 
+        <section class="hero">
+            <div class="hero-badge">✦ Search • Research • Write</div>
+            <h2>ماذا تريد أن تعرف؟</h2>
+            <p>ابحث، حلّل، واكتب باستخدام NORYN AI</p>
+        </section>
+
+        <section class="search-box">
+            <textarea id="queryInput" placeholder="اكتب سؤالك أو الموضوع الذي تريد البحث عنه..." rows="4"></textarea>
+            <div class="search-actions">
+                <button class="mode-button active" data-mode="search">🔎 بحث</button>
+                <button class="mode-button" data-mode="research">🔬 بحث متعمق</button>
+                <button class="mode-button" data-mode="write">✍️ كتابة</button>
+                <button class="send-button" id="sendButton" aria-label="إرسال">➜</button>
+            </div>
+        </section>
+
+        <section class="result-area" id="resultArea">
+            <div class="welcome-card">
+                <div class="welcome-icon">✦</div>
+                <h3>مرحبًا بك في NORYN AI</h3>
+                <p>الإصدار v8 جاهز للبناء. سنضيف البحث والذكاء الاصطناعي في الخطوة التالية.</p>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active"><span>🔎</span><small>بحث</small></button>
+            <button class="nav-item"><span>🔬</span><small>Research</small></button>
+            <button class="nav-item"><span>✍️</span><small>Write</small></button>
+            <button class="nav-item"><span>💬</span><small>Chat</small></button>
+            <button class="nav-item"><span>⚙️</span><small>إعدادات</small></button>
+        </nav>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
